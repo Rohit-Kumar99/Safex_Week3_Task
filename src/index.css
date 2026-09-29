@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #0c0e12;
+    color: #e2e8f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+  }
+}
+
+/* Industrial Technical Accents & Hazard Stripes */
+.hazard-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff5500,
+    #ff5500 12px,
+    #13161c 12px,
+    #13161c 24px
+  );
+}
+
+.hazard-stripe-subtle {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 85, 0, 0.15),
+    rgba(255, 85, 0, 0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.industrial-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.technical-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Custom Industrial Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0e12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b3341;
+  border-radius: 0px;
+  border: 1px solid #13161c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5500;
+}
